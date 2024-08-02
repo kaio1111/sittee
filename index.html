@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="style.css">
  </head>
  <body>
-    <header>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+
 
     <script src="script.js"></script>
- </body>
- </html> 
+  
+
+<header class="cabeçalho">
+    <div class="container">
+        <input type="checkbox" id="menu" class="container__botao">
+        <label for="menu">
+            <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+        </label>
+        <img src="img/Logo.svg" alt="Logotipo da Biblioteca Start">
+    </div>
+    <div class="container">
+        <a href="#"><img src="img/Favoritos.svg" alt="Favoritos" class="container__imagem"></a>
+        <a href="#"><img src="img/Emprestimos.svg" alt="Carrinho" class="container__imagem"></a>
+        <a href="#"><img src="img/Usuario.svg" alt="Meu Perfil" class="container__imagem"></a>
+    </div>
+</header>
+
+
+<script src="script.js"></script>
