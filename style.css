@@ -69,4 +69,16 @@ header {
     .menu-toggle {
         display: flex;
     }
+
+    .bar1-active {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .bar2-active {
+        opacity: 0;
+    }
+    
+    .bar3-active {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
