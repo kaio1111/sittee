@@ -30,3 +30,75 @@
 
 
 <script src="script.js"></script>
+
+ </body>
+
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hamburger</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .menu {
+            position: relative;
+        }
+        .menu-btn {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: #333;
+            color: #fff;
+            width: 200px;
+            border-radius: 4px;
+        }
+        .menu-content a {
+            display: block;
+            padding: 15px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+        .menu-content a:hover {
+            background: #555;
+        }
+        .menu-content a:last-child {
+            border-bottom: none;
+        }
+        .menu-btn.active + .menu-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+        <div class="menu-content" id="menuContent">
+            <a href="#contato">Contato</a>
+            <a href="#favoritos">Favoritos</a>
+            <a href="#carrinho">Carrinho</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuBtn = document.querySelector('.menu-btn');
+            const menuContent = document.getElementById('menuContent');
+            menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
