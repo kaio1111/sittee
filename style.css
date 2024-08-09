@@ -56,6 +56,12 @@ header {
     height: auto;
 }
 
+.logo.svg_imagem{
+    width: 45px;
+    height: auto;
+}
+}
+
 @media (max-width: 768px) {
     .menu {
         display: none;
