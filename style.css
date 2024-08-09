@@ -19,3 +19,66 @@ header {
     flex-direction: column;
     cursor: pointer;
 }
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: blueviolet;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.navbar {
+    display: flex;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    padding: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: aqua;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: chartreuse;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: brown;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .bar:nth-child(1) {
+        transform: ${({ is0pen }) => is0pen ? 'rotate(-45deg) translate(-5px, 6px)' : 'none'};
+    }
+
+    .bar:nth-child(2) {
+        opacity: ${({ is0pen }) => is0pen ? 0 : 1};
+    }
+
+    .bar:nth-child(3) {
+        transform: ${({ is0pen }) => is0pen ? 'rotate(45deg) translate(-5px, -6px)' : 'none'} ;
+    }
+}
