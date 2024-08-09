@@ -57,7 +57,7 @@ header {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 50px;
+        top: 60px; /* Ajuste conforme necessário */
         left: 0;
         background-color: brown;
     }
@@ -68,17 +68,5 @@ header {
 
     .menu-toggle {
         display: flex;
-    }
-
-    .bar:nth-child(1) {
-        transform: ${({ is0pen }) => is0pen ? 'rotate(-45deg) translate(-5px, 6px)' : 'none'};
-    }
-
-    .bar:nth-child(2) {
-        opacity: ${({ is0pen }) => is0pen ? 0 : 1};
-    }
-
-    .bar:nth-child(3) {
-        transform: ${({ is0pen }) => is0pen ? 'rotate(45deg) translate(-5px, -6px)' : 'none'} ;
     }
 }
